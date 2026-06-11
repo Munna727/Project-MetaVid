@@ -1,0 +1,684 @@
+
+
+/* ================= FIRST BLOCK ================= */
+
+.first-block {
+    min-height: 100vh;
+    padding-top: 120px;
+
+    background:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(
+            180deg,
+            #e9edf3 0%,
+            #d8d3e8 30%,
+            #d8bfdc 55%,
+            #e6b7c8 75%,
+            #f3c7b6 100%
+        );
+
+    background-size: 100px 100px, 100px 100%, 100% 100%;
+    background-repeat: repeat, repeat, no-repeat;
+}
+
+
+/* ================= FEATURE BUTTON ================= */
+
+.feature-button {
+    display: flex;
+}
+
+.feature-button button {
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(99,102,241,0.3);
+}
+
+.feature-button button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(99,102,241,0.4);
+}
+
+.feature-button button:active {
+    transform: scale(0.96);
+    box-shadow: 0 5px 15px rgba(99,102,241,0.2);
+}
+
+/* ================= INTRO SECTION ================= */
+
+.intro-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-intro-div {
+    flex: 1;
+    width: 60%;
+}
+
+.left-inner-div,
+.left-inner-title-div,
+.left-inner-info-div {
+    margin-left: 35px;
+}
+
+.left-inner-div { font-size: 25px; }
+.left-inner-title-div { font-size: 35px; }
+
+.left-inner-info-div {
+    font-size: 20px;
+    margin-top: -50px;
+    white-space: pre-line;
+}
+
+.meta,
+.vid {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: 155px;
+    font-weight: 500;
+}
+
+/* ================= INTRO FADE ================= */
+
+.left-intro-div,
+.left-inner-div,
+.left-inner-title-div,
+.left-inner-info-div {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= VIDEO ================= */
+
+.right-intro-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.intro-video {
+    margin-top: 110px;
+    width: 100%;
+    max-width: 580px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+}
+
+/* ================= FEATURES SECTION ================= */
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 80px 0;
+}
+
+.box {
+    width: 95%;
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 45px;
+    gap: 30px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #a9c7d8, #cbb9d0, #e3b0c2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.35s ease;
+    animation: fadeUp linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.box:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* ================= DETAILS ================= */
+
+.details-div {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.feature-title {
+    font-size: 54px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.box:hover .feature-title {
+    color: #020617;
+    transform: translateX(5px);
+}
+
+/* ================= FUNCTION + APPLICATION ================= */
+
+.func-div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.func-div > div,
+.app-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.func-img img,
+.app-img img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.box:hover .func-img img,
+.box:hover .app-img img {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.func-details,
+.app-details {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: 15px;
+}
+
+.func-title,
+.app-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.func-info,
+.app-info {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #334155;
+    margin-left: 15px;
+}
+
+.app-info {
+    margin-left: 30px;
+}
+
+.app-info li {
+    margin-bottom: -15px;
+}
+
+/* ================= FEATURE IMAGE ================= */
+
+.img-div {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+
+.box:hover .feature-img {
+    transform: scale(1.05);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+        filter: blur(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+    .box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-img {
+        width: 240px;
+    }
+}
+
+/* ================= GLOBAL ================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+    background: #e9e7e7;
+}
+
+body {
+    border-radius: 10px;
+    color: #0f172a;
+    padding-top: 8px;
+    min-height: 100vh;
+}
+
+/* ================= FIRST BLOCK ================= */
+
+.first-block {
+    min-height: 100vh;
+    padding-top: 120px;
+
+    background:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(
+            180deg,
+            #e9edf3 0%,
+            #d8d3e8 30%,
+            #d8bfdc 55%,
+            #e6b7c8 75%,
+            #f3c7b6 100%
+        );
+
+    background-size: 100px 100px, 100px 100%, 100% 100%;
+    background-repeat: repeat, repeat, no-repeat;
+}
+
+/* ================= NAVBAR ================= */
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    transition: all 0.4s ease;
+}
+
+.nav-bar.scrolled {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.nav-main-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+.nav-bar-logo {
+    width: 240px;
+    height: 70px;
+}
+
+.nav-middle-div {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    font-weight: 480;
+    border-radius: 28px;
+    background: #f8f7f7;
+    overflow: hidden;
+    transition: border-radius 0.5s ease-in-out;
+    box-shadow: 7px 8px 23px 4px rgba(226,211,211,0.75);
+}
+
+.nav-middle-div:hover {
+    border-radius: 20px;
+}
+
+.middle-inner-divs {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.nav-right-part {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+/* ================= NAV CTA ================= */
+
+.nav-cta {
+    padding: 9px 20px;
+    border-radius: 10px;
+    border: 1px solid #1f2937;
+    cursor: pointer;
+    font-weight: 500;
+    background: linear-gradient(135deg, #111827, #1f2937);
+    color: #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+    background: linear-gradient(135deg, #1f2937, #374151);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.nav-cta:active {
+    transform: scale(0.96);
+}
+
+/* ================= FEATURE BUTTON ================= */
+
+.feature-button {
+    display: flex;
+}
+
+.feature-button button {
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(99,102,241,0.3);
+}
+
+.feature-button button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(99,102,241,0.4);
+}
+
+.feature-button button:active {
+    transform: scale(0.96);
+    box-shadow: 0 5px 15px rgba(99,102,241,0.2);
+}
+
+/* ================= INTRO SECTION ================= */
+
+.intro-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-intro-div {
+    flex: 1;
+    width: 60%;
+}
+
+.left-inner-div,
+.left-inner-title-div,
+.left-inner-info-div {
+    margin-left: 35px;
+}
+
+.left-inner-div { font-size: 25px; }
+.left-inner-title-div { font-size: 35px; }
+
+.left-inner-info-div {
+    font-size: 20px;
+    margin-top: -50px;
+    white-space: pre-line;
+}
+
+.meta,
+.vid {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: 155px;
+    font-weight: 500;
+}
+
+/* ================= INTRO FADE ================= */
+
+.left-intro-div,
+.left-inner-div,
+.left-inner-title-div,
+.left-inner-info-div {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= VIDEO ================= */
+
+.right-intro-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.intro-video {
+    margin-top: 110px;
+    width: 100%;
+    max-width: 580px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+}
+
+/* ================= FEATURES SECTION ================= */
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 80px 0;
+}
+
+.box {
+    width: 95%;
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 45px;
+    gap: 30px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #a9c7d8, #cbb9d0, #e3b0c2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: all 0.35s ease;
+    animation: fadeUp linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.box:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* ================= DETAILS ================= */
+
+.details-div {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.feature-title {
+    font-size: 54px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.box:hover .feature-title {
+    color: #020617;
+    transform: translateX(5px);
+}
+
+/* ================= FUNCTION + APPLICATION ================= */
+
+.func-div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.func-div > div,
+.app-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.func-img img,
+.app-img img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.box:hover .func-img img,
+.box:hover .app-img img {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.func-details,
+.app-details {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: 15px;
+}
+
+.func-title,
+.app-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.func-info,
+.app-info {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #334155;
+    margin-left: 15px;
+}
+
+.app-info {
+    margin-left: 30px;
+}
+
+.app-info li {
+    margin-bottom: -15px;
+}
+
+/* ================= FEATURE IMAGE ================= */
+
+.img-div {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+
+.box:hover .feature-img {
+    transform: scale(1.05);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+        filter: blur(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+    .box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-img {
+        width: 240px;
+    }
+}
+
+
+
+

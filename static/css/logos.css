@@ -1,0 +1,203 @@
+
+/* BODY GRADIENT */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+
+  /*   background: linear-gradient(
+        135deg,
+        #f5c6d6 0%,
+        #d6c3e5 40%,
+        #c7d7f2 70%,
+        #f3c1c8 100%
+    );
+*/
+    background-attachment: fixed;
+}
+
+/* MAIN CONTAINER */
+.container {
+
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    overflow: hidden;
+    margin-top:100px;
+}
+
+/* TITLE */
+h1 {
+
+    text-align: center;
+
+    padding: 20px;
+
+    border-bottom: 3px solid #38bdf8;
+}
+
+/* UPLOAD SECTION */
+.upload-section {
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+input[type="file"] {
+
+    padding: 8px;
+}
+
+button {
+
+    padding: 10px 18px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 500;
+
+}
+
+button:hover {
+
+    background: #1d4ed8;
+}
+
+/* VIDEO SECTION */
+.video-section {
+
+    padding: 20px;
+}
+
+/* VIDEO */
+video {
+
+    width: 100%;
+
+    border-radius: 12px;
+}
+
+/* CONTROLS BELOW VIDEO */
+.controls-container {
+
+    margin-top: 10px;
+
+    padding: 10px;
+
+    background: #f8fbff;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* CONTROL BUTTON HOVER EFFECT */
+.plyr__control {
+
+    border-radius: 8px;
+
+    transition: 0.2s ease;
+}
+
+.plyr__control:hover {
+
+    background: linear-gradient(
+        135deg,
+        #2196f3,
+        #42a5f5
+    ) !important;
+
+    color: white !important;
+
+    transform: scale(1.12);
+
+}
+
+.plyr__control:hover svg {
+
+    fill: white !important;
+}
+
+/* LOGO SECTION */
+.logos-section {
+
+    padding: 20px;
+}
+
+.logos-title {
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+/* GRID */
+.logos-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+    gap: 20px;
+}
+
+/* CARD */
+.logo-card {
+
+    background: linear-gradient(
+        135deg,
+        #f8fbff,
+        #eef4ff
+    );
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+
+    transition: 0.3s ease;
+}
+
+.logo-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.logo-card img {
+
+    width: 100px;
+
+    margin-bottom: 12px;
+}
+
+.logo-name {
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #1e3a8a;
+}

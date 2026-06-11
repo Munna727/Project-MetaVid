@@ -1,0 +1,166 @@
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f4f6f9;
+    color: #0f172a;
+}
+h1 {
+
+    text-align: center;
+
+    padding: 20px;
+
+    border-bottom: 3px solid #38bdf8;
+}
+
+/* UPLOAD SECTION */
+.upload-section{
+text-align: center;
+
+    padding: 20px;
+
+
+
+
+}
+.upload-section button{
+
+    padding:7px 16px;
+
+    margin-left:10px;
+
+    background:#38bdf8;
+
+    border:none;
+
+    color:white;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    transition:0.2s;
+
+}
+
+.upload-section button:hover{
+
+    background:#0ea5e9;
+
+}
+.container {
+
+    width:90%;
+    margin:30px auto;
+    margin-top:100px;
+    background:white;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ================= Upload Bar ================= */
+
+.upload-wrapper {
+    background: #e9ecef;
+    padding: 15px 20px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 3px solid #3b82f6;
+}
+
+.upload-wrapper input[type="file"] {
+    flex: 1;
+}
+
+.upload-wrapper button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.upload-wrapper button:hover {
+    background: #0ea5e9;
+}
+
+/* ================= Layout ================= */
+
+.results {
+margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.video-section,
+.objects-section {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ================= Object Cards ================= */
+
+.object-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+    gap: 18px;
+
+    margin-top: 20px;
+
+}
+
+.object-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    width:100%;
+}
+
+.object-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.object-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.object-name {
+    font-weight: 600;
+}
+
+.timestamp {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .results {
+        grid-template-columns: 1fr;
+    }
+}
