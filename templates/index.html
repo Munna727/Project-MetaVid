@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/global.css">
+    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <div class="nav-main-div">
+            <div class="nav-left-part">
+                <a href="/"><img src="static/img/metavid-logo-removebg-preview.png"  class="nav-bar-logo" alt="not found"></a>
+            </div>
+            <div class="nav-middle-div">
+               <div class="middle-inner-divs"><a href="#features-section">Features</a></div>
+                <div class="middle-inner-divs"> Documentaton</div>
+                <div class="middle-inner-divs"><a class="nav-links" href="/team">Team</a></div>
+                <div class="middle-inner-divs"><a class="nav-links" href="#about-section">About Us</a></div>
+                <div class="slider"></div>
+            </div>
+           <div class="nav-right-part">
+               <a href="/"> <button class="nav-cta" onclick="/">
+                    Go Home
+                </button></a>
+            </div>
+
+        </div>
+
+    </nav>
+
+<section class="first-block">
+        <div class="intro-div">
+            <div class="left-intro-div">
+                <div class="left-inner-div">
+
+                        <div class="meta">
+                        Meta
+                        </div>
+                        <div class="vid">
+                            Vid
+                        </div>
+
+                </div>
+                <div class="left-inner-title-div">
+                    Meaning Driven Video Intelligence
+                </div>
+                <div class="left-inner-info-div">
+
+                </div>
+            </div>
+            <div class="right-intro-div">
+                <video  class="intro-video"  autoplay loop muted   playsinline >
+                    <source src="static/img/intro-1.mp4" type="video/mp4">
+                    <!-- Fallback content for unsupported browsers -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+<section id="features-section">
+    <div class="features">
+        <div class="box">
+
+            <div class="details-div">
+
+                <div class="feature-title">Shot Change Detection</div>
+
+                <div class="func-div">
+
+                    <!-- Functionalities row -->
+                    <div class="func-row">
+
+                        <div class="func-img">
+                            <img src="static/img/functionalities.png">
+                        </div>
+
+                        <div class="func-details">
+
+                            <div class="func-title">Functionalities</div>
+
+                            <div class="func-info">
+                               Detects abrupt and gradual scene transitions in videos and divides them into structured segments with timestamps. Generates scene-based metadata that can be used for indexing, navigation, and automated video processing.
+                            </div>
+
+                        </div>
+
+                    </div> <!-- ✅ CLOSE func-row -->
+
+
+                    <!-- Applications row -->
+                    <div class="app-div">
+
+                        <div class="app-img">
+                            <img src="static/img/applications.png">
+                        </div>
+
+                        <div class="app-details">
+
+                            <div class="app-title">Applications</div>
+
+                            <div class="app-info">
+                                <ul>
+                              <li> Automatic video editing in media production where long videos are split into meaningful scenes for faster editing. </li><br>
+                              <li>   Content summarization systems that generate highlights from sports, movies, or lectures.</li>  <br>
+                              <li>   Broadcast monitoring systems that automatically detect advertisement boundaries in TV streams. </li><br>
+                               </ul>
+                            </div>
+
+                            <div class="feature-button">
+                                <form method="POST"action="/shots">
+                                    <button type="submit">Detect Shot Changes</button>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- ✅ CLOSE app-div -->
+
+
+                </div> <!-- ✅ CLOSE func-div -->
+
+            </div> <!-- ✅ CLOSE details-div -->
+
+
+            <div class="img-div">
+                <img class="feature-img" src="static/img/feature-2.jpeg">
+            </div>
+
+</div>
+
+    <div class="box">
+
+            <div class="details-div">
+
+                <div class="feature-title">Face Detection</div>
+
+                <div class="func-div">
+
+                    <!-- Functionalities row -->
+                    <div class="func-row">
+
+                        <div class="func-img">
+                            <img src="static/img/functionalities.png">
+                        </div>
+
+                        <div class="func-details">
+
+                            <div class="func-title">Functionalities</div>
+
+                            <div class="func-info">
+                              Identifies and locates human faces frame by frame while assigning confidence scores for accuracy. Tracks faces across the video timeline and generates timestamp-based face appearance data.
+                            </div>
+
+                        </div>
+
+                    </div> <!-- ✅ CLOSE func-row -->
+
+
+                    <!-- Applications row -->
+                    <div class="app-div">
+
+                        <div class="app-img">
+                            <img src="static/img/applications.png">
+                        </div>
+
+                        <div class="app-details">
+
+                            <div class="app-title">Applications</div>
+
+                            <div class="app-info">
+                                <ul>
+                             <li>Attendance and identity verification systems in classrooms, offices, and events. </li> <br>
+                               <li>Surveillance systems that monitor human presence and trigger alerts for unknown individuals.</li>  <br>
+                               <li>Media analytics platforms that measure screen time and presence of people in interviews or films.</li> <br>
+                               </ul>
+                            </div>
+
+                            <div class="feature-button">
+                                <form method="POST" action="/face">
+                                    <button type="submit">Detect Faces</button>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- ✅ CLOSE app-div -->
+
+
+                </div> <!-- ✅ CLOSE func-div -->
+
+            </div> <!-- ✅ CLOSE details-div -->
+
+
+            <div class="img-div">
+                <img class="feature-img" src="static/img/feature-2.jpeg">
+            </div>
+
+</div>
+
+
+
+       <div class="box">
+
+            <div class="details-div">
+
+                <div class="feature-title">Object Detection</div>
+
+                <div class="func-div">
+
+                    <!-- Functionalities row -->
+                    <div class="func-row">
+
+                        <div class="func-img">
+                            <img src="static/img/functionalities.png">
+                        </div>
+
+                        <div class="func-details">
+
+                            <div class="func-title">Functionalities</div>
+
+                            <div class="func-info">
+                              Detects and classifies multiple objects within video frames using trained models. Tracks object movement across timestamps and outputs label-based analytical data.
+                            </div>
+
+                        </div>
+
+                    </div> <!-- ✅ CLOSE func-row -->
+
+
+                    <!-- Applications row -->
+                    <div class="app-div">
+
+                        <div class="app-img">
+                            <img src="static/img/applications.png">
+                        </div>
+
+                        <div class="app-details">
+
+                            <div class="app-title">Applications</div>
+
+                            <div class="app-info">
+                                <ul>
+                             <li>Retail and warehouse monitoring systems that track products and packaged goods in storage areas.</li> <br>
+                               <li>Smart traffic systems that detect vehicles and pedestrians for congestion analysis</li>  <br>
+                               <li>Content moderation platforms that identify sensitive or restricted objects in uploaded videos.</li> <br>
+                               </ul>
+                            </div>
+
+                            <div class="feature-button">
+                                    <form method="POST" action="/objects">
+                                        <button type="submit">Detect Objects</button>
+                                    </form>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- ✅ CLOSE app-div -->
+
+
+                </div> <!-- ✅ CLOSE func-div -->
+
+            </div> <!-- ✅ CLOSE details-div -->
+
+
+            <div class="img-div">
+                <img class="feature-img" src="static/img/object.jpeg">
+            </div>
+
+</div>
+
+
+
+
+       <div class="box">
+
+            <div class="details-div">
+
+                <div class="feature-title">Logo Detection</div>
+
+                <div class="func-div">
+
+                    <!-- Functionalities row -->
+                    <div class="func-row">
+
+                        <div class="func-img">
+                            <img src="static/img/functionalities.png">
+                        </div>
+
+                        <div class="func-details">
+
+                            <div class="func-title">Functionalities</div>
+
+                            <div class="func-info">
+                              Recognizes predefined brand logos within video frames and determines their presence duration. Generates timestamp-based logo frequency and exposure analytics for reporting purposes.
+                            </div>
+
+                        </div>
+
+                    </div> <!-- ✅ CLOSE func-row -->
+
+
+                    <!-- Applications row -->
+                    <div class="app-div">
+
+                        <div class="app-img">
+                            <img src="static/img/applications.png">
+                        </div>
+
+                        <div class="app-details">
+
+                            <div class="app-title">Applications</div>
+
+                            <div class="app-info">
+                                <ul>
+                             <li>Brand monitoring systems that track logo appearances in advertisements and social media videos.</li> <br>
+                               <li>Sponsorship analytics platforms that measure brand visibility during sports broadcasts. </li>  <br>
+                               <li>Intellectual property protection systems that detect unauthorized brand usage online.</li> <br>
+                               </ul>
+                            </div>
+
+                            <div class="feature-button">
+                                <form method="POST" action="/logos">
+                                    <button type="submit">Detect Logos</button>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- ✅ CLOSE app-div -->
+
+
+                </div> <!-- ✅ CLOSE func-div -->
+
+            </div> <!-- ✅ CLOSE details-div -->
+
+
+            <div class="img-div">
+                <img class="feature-img" src="static/img/logo.jpeg">
+            </div>
+
+</div>
+    </div>
+    </section>
+<section id="about-section">
+    <footer class="footer">
+
+    <!-- CTA SECTION -->
+    <div class="footer-cta">
+        <div class="cta-left">
+            <h2>Turn raw video into structured intelligence.</h2>
+            <p>Analyze faces, objects, logos and scenes with AI precision.</p>
+        </div>
+        <div class="cta-right">
+            <button class="cta-btn">Start Analyzing</button>
+        </div>
+    </div>
+
+    <!-- MAIN FOOTER -->
+    <div class="footer-main">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <span class="meta">Meta</span><span class="vid">Vid</span>
+            </div>
+
+            <p class="brand-desc">
+                MetaVid is a meaning-driven video intelligence platform designed
+                for developers, media teams, and AI-powered applications.
+            </p>
+        </div>
+
+        <!-- Links Grid -->
+        <div class="footer-links">
+
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <a href="/shots">Shot Detection</a>
+                <a href="/face">Face Detection</a>
+                <a href="/objects">Object Detection</a>
+                <a href="/logos">Logo Detection</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="#">Documentation</a>
+                <a href="https://docs.cloud.google.com/video-intelligence/docs?_gl=1*h213gp*_ga*OTQ2OTU1NjE2LjE3NTIxMzE5NzU.*_ga_WH2QY8WWF5*czE3NzE1ODczMTkkbzM4JGcxJHQxNzcxNTg3MzU2JGoyMyRsMCRoMA..">API Reference</a>
+                <a href="#">Blog</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="/team">Team</a>
+                <a href="#">Contact</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Strip -->
+    <div class="footer-bottom">
+        <div>© 2026 MetaVid. All rights reserved.</div>
+        <div class="bottom-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Security</a>
+        </div>
+    </div>
+
+</footer>
+
+</section>
+<script>
+
+const navbar = document.querySelector(".nav-bar");
+const firstBlock = document.querySelector(".first-block");
+
+window.addEventListener("scroll", () => {
+
+    const atTop = window.scrollY === 0;
+    const firstSectionHeight = firstBlock.offsetHeight;
+
+    if (!atTop && window.scrollY < firstSectionHeight) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+
+});
+
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+  const text = `MetaVid is a smart video intelligence platform that performs automated face detection and object tracking, extracts metadata, and visualizes results for real-world video analytics applications.`;
+
+  let i = 0;
+  const speed = 40;
+
+  const element = document.querySelector(".left-inner-info-div");
+
+  function type() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    }
+  }
+
+  type();
+});
+</script>
+
+<script>
+const elements = document.querySelectorAll(
+  ".left-intro-div, .left-inner-div, .left-inner-title-div, .left-inner-info-div"
+);
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show"); // ← This is the magic
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+elements.forEach(el => observer.observe(el));
+
+
+</script>
+
+<script>
+    const fileInput = document.querySelector('.upload-btn input[type="file"]');
+    const uploadText = document.querySelector('.upload-text');
+
+    fileInput.addEventListener('change', function () {
+        if (this.files.length > 0) {
+            uploadText.textContent = this.files[0].name;
+        } else {
+            uploadText.textContent = "Upload Here";
+        }
+    });
+</script>
+
+
+</body>
+</html>

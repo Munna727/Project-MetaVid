@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Face Detection</title>
+    <link rel="stylesheet" href="static/css/face.css">
+    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+    <link rel="stylesheet" href="static/css/global.css">
+     <link rel="stylesheet" href="static/css/index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css"/>
+
+</head>
+<body>
+ <nav class="nav-bar">
+        <div class="nav-main-div">
+            <div class="nav-left-part">
+               <a href="/"><img src="static/img/metavid-logo-removebg-preview.png"  class="nav-bar-logo" alt="not found"></a>
+            </div>
+            <div class="nav-middle-div">
+               <div class="middle-inner-divs"><a href="{{ url_for('home') }}#features-section">Features</a></div>
+                <div class="middle-inner-divs"> Documentaton</div>
+                <div class="middle-inner-divs"><a class="nav-links" href="/team">Team</a></div>
+                <div class="middle-inner-divs"><a class="nav-links" href="#about-section">About Us</a></div>
+                <div class="slider"></div>
+            </div>
+           <div class="nav-right-part">
+
+               <a href="/"> <button class="nav-cta" onclick="/">
+                    Go Home
+                </button></a>
+            </div>
+
+        </div>
+
+    </nav>
+<div class="background">
+<h1>Face Detection</h1>
+<!-- Upload Section -->
+<div class="upload-section">
+
+<form action="/facedetection" method="post" enctype="multipart/form-data">
+
+<input type="file" name="video" accept="video/*" required>
+
+<button type="submit">Upload</button>
+
+</form>
+
+</div>
+
+<!-- Video Section -->
+{% if url %}
+<div class="video-section">
+
+<video id="player" playsinline>
+
+<source src="{{ url }}" type="video/mp4">
+
+</video>
+
+<div id="controls" class="controls-container"></div>
+
+</div>
+{% endif %}
+
+<!-- Detection Results -->
+{% if face_data %}
+<div class="detection-results">
+
+<div class="results-header">
+Detected Faces
+</div>
+
+<div class="results-grid">
+
+{% for face in face_data %}
+
+<div class="face-card">
+
+<img src="{{ face.image_url }}">
+
+<div class="timestamp">
+Timestamp: {{ face.timestamp }} seconds
+</div>
+
+{% if face.attributes and face.attributes|length > 0 %}
+<div class="attributes">
+
+{% for key, value in face.attributes.items() %}
+
+<div class="attribute-item">
+<span>{{ key }}</span>
+<span>{{ (value * 100)|round(2) }}%</span>
+</div>
+
+{% endfor %}
+
+</div>
+{% endif %}
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+{% endif %}
+
+</div>
+<section id="about-section">
+    <footer class="footer">
+
+    <!-- CTA SECTION -->
+    <div class="footer-cta">
+        <div class="cta-left">
+            <h2>Turn raw video into structured intelligence.</h2>
+            <p>Analyze faces, objects, logos and scenes with AI precision.</p>
+        </div>
+        <div class="cta-right">
+            <button class="cta-btn">Start Analyzing</button>
+        </div>
+    </div>
+
+    <!-- MAIN FOOTER -->
+    <div class="footer-main">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <span class="meta">Meta</span><span class="vid">Vid</span>
+            </div>
+
+            <p class="brand-desc">
+                MetaVid is a meaning-driven video intelligence platform designed
+                for developers, media teams, and AI-powered applications.
+            </p>
+        </div>
+
+        <!-- Links Grid -->
+        <div class="footer-links">
+
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <a href="/shots">Shot Detection</a>
+                <a href="/face">Face Detection</a>
+                <a href="/objects">Object Detection</a>
+                <a href="/logos">Logo Detection</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="#">Documentation</a>
+                <a href="https://docs.cloud.google.com/video-intelligence/docs?_gl=1*h213gp*_ga*OTQ2OTU1NjE2LjE3NTIxMzE5NzU.*_ga_WH2QY8WWF5*czE3NzE1ODczMTkkbzM4JGcxJHQxNzcxNTg3MzU2JGoyMyRsMCRoMA..">API Reference</a>
+                <a href="#">Blog</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="/team">Team</a>
+                <a href="#">Contact</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Strip -->
+    <div class="footer-bottom">
+        <div>© 2026 MetaVid. All rights reserved.</div>
+        <div class="bottom-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Security</a>
+        </div>
+    </div>
+
+</footer>
+
+</section>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+
+<script>
+
+const player = new Plyr('#player', {
+
+controls: [
+'play',
+'rewind',
+'fast-forward',
+'progress',
+'current-time',
+'duration',
+'mute',
+'volume',
+'settings',
+'fullscreen'
+]
+
+});
+
+/* move controls below video */
+player.on('ready', () => {
+
+document.getElementById('controls')
+.appendChild(player.elements.controls);
+
+});
+
+</script>
+
+</body>
+</html>
